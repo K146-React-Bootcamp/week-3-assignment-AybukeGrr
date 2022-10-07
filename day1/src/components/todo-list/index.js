@@ -13,6 +13,7 @@ const TodoList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(15);
   const [sorted, setSorted] = useState({ sorted: "id", reversed:false});
+  const [changeValue, setChangeValue] = useState(" ");
 
   useEffect(() => {
     fetch(url)
@@ -74,6 +75,17 @@ const sortById = () => {
   setTodos(todoCopy);
 }
 
+const handleKaydet = () => {
+  const newTodos = todos.map((todo) => {
+    if(todo.id == selectedTodo.id){
+      return {...todo, title: changeValue};
+    }else{
+      return todo;
+    }
+  });
+  setTodos(newTodos);
+}
+
   const renderBody = () => {
     return (
       <tbody>
@@ -107,9 +119,9 @@ const sortById = () => {
   const renderEditForm = () => {
     return (
       <div>
-        <input type={"text"} />
+        <input type={"text"} onChange={(e) =>setChangeValue(e.target.value)} />
         <inpu type="check" />
-        <Button>Kaydet</Button>
+        <Button onClick={handleKaydet}>Kaydet</Button>
         <Button onClick={() => setSelectedTodo(undefined)}>Vazgeç</Button>
       </div>
     );
