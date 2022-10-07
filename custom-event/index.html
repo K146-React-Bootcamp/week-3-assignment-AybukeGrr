@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Event Example</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      Counter: <span id="counter">0</span>
+      <!--id'si counter olan bir span tanımlıyoruz.-->
+      <!--onclick evetinde counterChange fonksiyony tanımlıyoruz ve parametre olarak da incerement ve decrement veriyoruz.-->
+      <button id="inc" onclick="counterChange('increment')">+</button>
+      <button id="dec" onclick="counterChange('decrement')">-</button>
+    </div>
+
+    <script src="custom.js"></script>
+  </body>
+</html>
+
+<!--customEvent data çekmek için detail kullanır. Bu yüzden detail içeirisinde bir count özelliği gönderdim.-->

@@ -1,1 +1,9 @@
-bu dosya içerisinde ödevi yapabilirsiniz.
+CustomEvent() Nedir?
+
+Hazır oluşturulmuş eventler dışında kendi özel ihtiyaçalarımız için kendi
+olaylarımızı başlatmak istediğimiz anlar olabilir. Bunun için CustomEvent
+kullanırız.
+Kısacası CustomEvent kendi özel etkinliğimizi oluşturmak için kullanacağımız yapıdır.
+
+CustomEvent'i daha iyi anlamak için bir sayaç örneği gerçekleştirdim.
+Örnekte bir sayaç durumu iki buton ile değiştirilerek ve dinleyerek değişimlerini izliyoruz.
